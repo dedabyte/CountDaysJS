@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+h1{ font-family: sans-serif; font-weight: normal; font-size: 60px; text-align: center; }
+small{ padding-right: 20px; }
+</style>
+<script src="countdays.js"></script>
+<script>
+window.onload = function() {
+	var h1 = document.getElementById('h1');
+	window.cd = new CountDays({
+		date: new Date(2013,7,10,17),
+		callback: function(arr){
+			var d = arr[0],
+				h = arr[1],
+				m = arr[2],
+				s = arr[3];
+		
+			h = h < 10 ? '0' + h : h,
+			m = m < 10 ? '0' + m : m,
+			s = s < 10 ? '0' + s : s;
+			
+			h1.innerHTML = d + '<small>d</small>' + h + '<small>h</small>' + m + '<small>m</small>' + s + '<small>s</small>';
+		}
+	});
+	cd.StartCount();
+}	
+</script>
+</head>
+<body>
+<h1 id="h1"></h1>
+</body>
+</html>
