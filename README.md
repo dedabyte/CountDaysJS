@@ -11,8 +11,6 @@ Idea is to implement simple code that calculates diff between two dates mesaured
 
 ## Docs
 
----
-
 Create:
 
     var cd = new CountDays();
@@ -41,6 +39,10 @@ Stops calculations.
 
     cs.DatesDiff(date1, date2, dateType);
     
-Static method that calculates diff between given dates. `dateType` is optional and can be:  
-**'y m d'**: `date1` and `date2` should be strings in this format: 'yyyy mm dd'. Examples: `'2014 1 1'`, `'2014 12 31'`...  
-**'num'**: `date1` and `date2` should be strings or numbers in format 'yyyymmddhhmmss'. Minimum length is 4, max 12. Every omitted pair will be parsed as 0. Examples: `'20140101'`, `2014030511`, `'201408101930'`...
+Static method that calculates diff between given `Date` dates.  
+`dateType` is optional and can be:  
+**'y m d'**: `date1` and `date2` should be strings in format `yyyy mm dd`.  
+Examples: `'2014 1 1'`, `'2014 12 31'`...
+
+**'num'**: `date1` and `date2` should be strings or numbers in format `yyyymmddhhmmss`. Minimum length is 4, max 12. Every omitted pair will be parsed as 0.  
+Examples: `'20140101'`, `2014030511`, `'201408101930'`...
